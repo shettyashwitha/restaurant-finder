@@ -489,7 +489,7 @@ class RestaurantContainer extends Component {
     return (
       <div>
       {this.state.restaurants.map((restaurant) => {
-        return <Restaurant></Restaurant>})}
+        return <Restaurant data={restaurant}></Restaurant>})}
       </div>
     );
   }

@@ -4,8 +4,8 @@
     padding: 15px 0;
     display: flex;
     align-items: center;
-    background-color: beige;
-    border-bottom: 1px solid gray;
+    // background-color: beige;
+    border-bottom: 1px solid #ccc;
 }
 
 
@@ -33,8 +33,9 @@ img.restaurant-image {
 
 .fa-star {
   margin-left: 3px;
+  color: #ccc;
   &.checked {
-      color: green;
+      color: orange;
   }
 }
 
@@ -57,7 +58,7 @@ img.restaurant-image {
 }
 
 .available {
-  color: green;
+  color: orange;
 }
 
 .not-available {

@@ -4,8 +4,7 @@
   padding: 15px 0;
   display: flex;
   align-items: center;
-  background-color: beige;
-  border-bottom: 1px solid gray; }
+  border-bottom: 1px solid #ccc; }
 
 img.restaurant-image {
   height: 100%;
@@ -26,9 +25,10 @@ img.restaurant-image {
     padding-left: 10px; }
 
 .fa-star {
-  margin-left: 3px; }
+  margin-left: 3px;
+  color: #ccc; }
   .fa-star.checked {
-    color: green; }
+    color: orange; }
 
 .small-text {
   font-size: 14px;
@@ -45,7 +45,7 @@ img.restaurant-image {
   margin-bottom: 5px; }
 
 .available {
-  color: green; }
+  color: orange; }
 
 .not-available {
   color: red; }
