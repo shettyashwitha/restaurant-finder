@@ -3,7 +3,7 @@ import RestaurantContainer from './restaurant-container/restaurant-container.js'
 import logo from './bg-image.jpg';
 import './App.css';
 // import MapWithAMarker from './google-map';
-import AutoComplete from './auto-complete';
+import AutoComplete from './auto-complete/auto-complete';
 
 class App extends Component {
   constructor(props) {
@@ -11,7 +11,7 @@ class App extends Component {
     this.state = {
       restuarantList: [],
       zomatoUrl: 'https://developers.zomato.com/api/v2.1/geocode',
-      zomatoUserKey: '',
+      zomatoUserKey: 'b596af176b098ffab3249afbdb87429a',
       loader: true,
       currentLocation: ''
     }
@@ -36,11 +36,11 @@ class App extends Component {
 
   checkStatus(response) {
     if (response.status >= 200 && response.status < 300) {
-      return response
+      return response;
     } else {
-      var error = new Error(response.statusText)
-      error.response = response
-      throw error
+      var error = new Error(response.statusText);
+      error.response = response;
+      throw error;
     }
   }
 

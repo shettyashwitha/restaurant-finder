@@ -1,15 +1,15 @@
 import React from 'react'
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete'
-
+import './auto-complete.css';
 class AutoComplete extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { address: 'Bangalore, Karnataka, India' }
+    this.state = { address: 'Koramangala 3rd Block' }
     this.onChange = (address) => this.setState({ address })
   }
 
   handleFormSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     this.loadRestuarantListFunction();
   }
 
@@ -32,7 +32,7 @@ class AutoComplete extends React.Component {
 
     return (
       <form className = "search-form" onSubmit={this.handleFormSubmit}>
-        <PlacesAutocomplete inputProps={inputProps} />
+        <PlacesAutocomplete inputProps={inputProps} onEnterKeyDown={this.loadRestuarantListFunction.bind(this)}/>
         <button type="submit">Find Restaurant</button>
       </form>
     )
