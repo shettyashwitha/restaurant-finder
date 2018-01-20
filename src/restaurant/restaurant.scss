@@ -1,0 +1,65 @@
+.restaurant-each-overlay {
+    width: 1024px;
+    height: 160px;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    background-color: beige;
+    border-bottom: 1px solid gray;
+}
+
+
+img.restaurant-image {
+    height: 100%;
+    width: 175px;
+}
+
+.right-section {
+    padding-left: 15px;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+}
+
+.restaurant-name {
+    font-size: 20px;
+    margin-bottom: 10px;
+    span {
+      font-size: 14px;
+      color: #4a4a4a;
+      padding-left: 10px;
+    }
+}
+
+.fa-star {
+  margin-left: 3px;
+  &.checked {
+      color: green;
+  }
+}
+
+.small-text {
+  font-size: 14px;
+  color: #4a4a4a;
+}
+
+.med-text {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.f15 {
+  font-size: 15px;
+}
+
+.margin-down {
+  margin-bottom: 5px;
+}
+
+.available {
+  color: green;
+}
+
+.not-available {
+  color: red;
+}
