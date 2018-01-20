@@ -1,0 +1,48 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 80px;
+}
+
+.App-header {
+  background-image: url('./bg-image.jpg');
+  height: 300px;
+  padding: 20px;
+  color: white;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.search-container {
+  margin: auto;
+  width: 75%;
+}
+
+
+/*auto complate css starts*/
+.search-form{
+  display: flex;
+
+  div#PlacesAutocomplete__root{
+    width: 70%;
+  }
+  button{
+    width: 30%;
+    background-color: #b8860b;
+    color: #FFF;
+    font-size: 15px;
+  }
+}
+
+/*auto complate css ends*/
