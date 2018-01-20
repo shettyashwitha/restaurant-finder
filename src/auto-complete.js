@@ -4,17 +4,24 @@ import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-au
 class AutoComplete extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { address: 'San Francisco, CA' }
+    this.state = { address: 'Bangalore, Karnataka, India' }
     this.onChange = (address) => this.setState({ address })
   }
 
   handleFormSubmit = (event) => {
     event.preventDefault()
+    this.loadRestuarantListFunction();
+  }
 
+  loadRestuarantListFunction() {
     geocodeByAddress(this.state.address)
       .then(results => getLatLng(results[0]))
       .then(this.props.loadRestuarantList)
       .catch(error => console.error('Error', error))
+  }
+
+  componentDidMount() {
+    this.loadRestuarantListFunction();
   }
 
   render() {

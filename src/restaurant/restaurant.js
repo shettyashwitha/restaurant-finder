@@ -7,7 +7,7 @@ class Restaurant extends Component {
   }
   render() {
     const restaurant = this.props.data.restaurant;
-    const positiveRatings = Math.floor(restaurant.user_rating.aggregate_rating);
+    const positiveRatings = Math.round(restaurant.user_rating.aggregate_rating);
     const noRatings = 5 - positiveRatings;
     console.log(positiveRatings, noRatings);
     return (

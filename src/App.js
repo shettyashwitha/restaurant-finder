@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import RestaurantContainer from './restaurant-container/restaurant-container.js';
 import logo from './bg-image.jpg';
 import './App.css';
-import MapWithAMarker from './google-map';
+// import MapWithAMarker from './google-map';
 import AutoComplete from './auto-complete';
 
 class App extends Component {
@@ -11,21 +11,26 @@ class App extends Component {
     this.state = {
       restuarantList: [],
       zomatoUrl: 'https://developers.zomato.com/api/v2.1/geocode',
-      zomatoUserKey: ''
+      zomatoUserKey: '',
+      loader: true,
+      currentLocation: ''
     }
   }
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to Restaurant Finder</h1>
-          <div className="search-container">
-            <AutoComplete loadRestuarantList = {this.loadRestuarantList.bind(this)}/>
-          </div>
-        </header>
-        <RestaurantContainer restaurants = { this.state.restuarantList }></RestaurantContainer>
-      </div>
+        <div className="App">
+          <header className="App-header">
+            <h1 className="App-title">Welcome to Restaurant Finder</h1>
+            <div className="search-container">
+              <AutoComplete loadRestuarantList = {this.loadRestuarantList.bind(this)}/>
+            </div>
+          </header>
+          {
+            this.state.loader ? <img className="loader" src={require("./loader.gif")}/> :
+             <RestaurantContainer restaurants = { this.state.restuarantList } location={this.state.currentLocation}></RestaurantContainer>
+          }
+        </div>
     );
   }
 
@@ -38,12 +43,13 @@ class App extends Component {
       throw error
     }
   }
-  
+
   parseJSON(response) {
     return response.json()
   }
 
   loadRestuarantList(latLng){
+    this.setState({'loader': true});
     console.log('latLng', latLng);
     const url = this.state.zomatoUrl + '?lat='+ latLng.lat +'&lon='+ latLng.lng;
     fetch(url, {
@@ -58,7 +64,7 @@ class App extends Component {
     .then((resp)=>{
       console.log(resp);
       const restuarantList = resp.nearby_restaurants;
-      this.setState({'restuarantList': restuarantList});
+      this.setState({'restuarantList': restuarantList, 'loader': false, 'currentLocation': resp.location.title});
     })
 
   }

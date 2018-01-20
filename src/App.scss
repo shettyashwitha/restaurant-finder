@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  width: 1240px;
+  margin: auto;
 }
 
 .App-logo {
@@ -8,7 +10,7 @@
 
 .App-header {
   background-image: url('./bg-image.jpg');
-  height: 300px;
+  height: 270px;
   padding: 20px;
   color: white;
   background-repeat:no-repeat;
@@ -26,7 +28,8 @@
 
 .search-container {
   margin: auto;
-  width: 75%;
+  width: 65%;
+  text-align: left;
 }
 
 
@@ -36,13 +39,28 @@
 
   div#PlacesAutocomplete__root{
     width: 70%;
+    input {
+      display: inline-block;
+      width: calc(100% - 20px)!important;
+      padding: 10px;
+      font-size: 16px!important;
+      border-radius: 3px 0 0 3px!important;
+      border: none!important;
+    }
   }
   button{
     width: 30%;
     background-color: #b8860b;
     color: #FFF;
     font-size: 15px;
+    border: none;
+    font-weight: bold;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
   }
 }
 
+.loader {
+  width: 100px;
+}
 /*auto complate css ends*/

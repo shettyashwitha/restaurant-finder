@@ -10,7 +10,8 @@ class RestaurantContainer extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="restaurant-container-overlay">
+      <h2 className="left-align">Restaurants list in {this.props.location}</h2>
       {this.props.restaurants.map((restaurant) => {
         return <Restaurant data={restaurant}></Restaurant>})}
       </div>
