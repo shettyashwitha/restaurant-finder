@@ -4,4 +4,7 @@
 
 .left-align {
   text-align: left;
+  @media screen and (max-device-width: 1240px) {
+      font-size: 1em;
+  }
 }

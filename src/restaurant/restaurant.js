@@ -15,7 +15,7 @@ class Restaurant extends Component {
           <img src={restaurant.thumb} alt={restaurant.name} className="restaurant-image"/>
           <div className="right-section">
             <div className="restaurant-name">{restaurant.name}<span>{restaurant.location.locality}</span></div>
-            <div className="user-rating"><span className="med-text">User rating: </span>
+            <div className="user-rating f15"><span className="med-text">User rating: </span>
               {[...Array(positiveRatings)].map((e, i) => <span className="fa fa-star checked" key={i}></span>)}
               {[...Array(noRatings)].map((e, i) => <span className="fa fa-star" key={i}></span>)}
             </div>

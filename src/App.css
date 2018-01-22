@@ -1,7 +1,13 @@
 .App {
   text-align: center;
-  width: 1240px;
+  width: 80%;
   margin: auto; }
+  @media screen and (max-device-width: 1240px) {
+    .App {
+      width: 100%; } }
+  @media screen and (max-device-width: 414px) {
+    .App {
+      width: auto; } }
 
 .App-logo {
   height: 80px; }
@@ -23,10 +29,17 @@
     background-color: rgba(0, 0, 0, 0.3);
     top: 0;
     left: 0; }
+  @media screen and (max-device-width: 414px) {
+    .App-header {
+      width: auto;
+      height: 150px; } }
 
 .App-title {
   font-size: 1.5em;
   position: relative; }
+  @media screen and (max-device-width: 1240px) {
+    .App-title {
+      font-size: 1.2em; } }
 
 .App-intro {
   font-size: large; }
@@ -35,7 +48,8 @@
   margin: auto;
   width: 65%;
   text-align: left;
-  position: relative; }
+  position: relative;
+  z-index: 2; }
 
 .loader {
   width: 100px; }

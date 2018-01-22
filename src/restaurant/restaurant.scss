@@ -4,12 +4,18 @@
     display: flex;
     align-items: center;
     border-bottom: 1px solid #ccc;
+    @media screen and (max-device-width: 414px) {
+        height: auto;
+        align-items: end;
+    }
 }
-
 
 img.restaurant-image {
     height: 100%;
     width: 175px;
+    @media screen and (max-device-width: 414px) {
+      width: 125px;
+    }
 }
 
 .right-section {
@@ -23,10 +29,21 @@ img.restaurant-image {
 .restaurant-name {
     font-size: 20px;
     margin-bottom: 10px;
+    @media screen and (max-device-width: 414px) {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
     span {
       font-size: 14px;
       color: #4a4a4a;
       padding-left: 10px;
+        @media screen and (max-device-width: 414px) {
+          display: block;
+          padding-left: 0;
+          font-weight: 100;
+          font-size: 12px;
+        }
     }
 }
 
@@ -46,6 +63,11 @@ img.restaurant-image {
     padding: 10px 32px;
     border-radius: 3px;
     box-shadow: 1px 2px 3px grey;
+    @media screen and (max-device-width: 414px) {
+      padding: 6px 10px;
+      font-size: 14px;
+      position: absolute;
+    }
     a {
       color: white;
       text-decoration: none;
@@ -56,19 +78,27 @@ img.restaurant-image {
 .small-text {
   font-size: 14px;
   color: #4a4a4a;
+  @media screen and (max-device-width: 414px) {
+    font-size: 10px;
+  }
 }
 
 .med-text {
-  font-size: 15px;
   font-weight: bold;
 }
 
 .f15 {
   font-size: 15px;
+  @media screen and (max-device-width: 414px) {
+    font-size: 12px;
+  }
 }
 
 .margin-down {
   margin-bottom: 5px;
+  @media screen and (max-device-width: 414px) {
+    margin-bottom: 3px;
+  }
 }
 
 .available {

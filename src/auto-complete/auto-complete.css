@@ -1,7 +1,13 @@
 .search-form {
   display: flex; }
+  @media screen and (max-device-width: 414px) {
+    .search-form {
+      flex-direction: column; } }
   .search-form div#PlacesAutocomplete__root {
     width: 70%; }
+    @media screen and (max-device-width: 414px) {
+      .search-form div#PlacesAutocomplete__root {
+        width: 100%; } }
     .search-form div#PlacesAutocomplete__root input {
       display: inline-block;
       width: calc(100% - 20px) !important;
@@ -9,6 +15,9 @@
       font-size: 16px !important;
       border-radius: 3px 0 0 3px !important;
       border: none !important; }
+      @media screen and (max-device-width: 414px) {
+        .search-form div#PlacesAutocomplete__root input {
+          border-radius: 3px !important; } }
   .search-form button {
     width: 30%;
     background-color: #b8860b;
@@ -18,3 +27,9 @@
     font-weight: bold;
     border-radius: 0 3px 3px 0;
     cursor: pointer; }
+    @media screen and (max-device-width: 414px) {
+      .search-form button {
+        border-radius: 3px;
+        margin: 10px auto;
+        width: auto;
+        padding: 10px 20px; } }
